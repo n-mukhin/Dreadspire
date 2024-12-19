@@ -1,0 +1,14 @@
+version: '3'
+services:
+  backend:
+    build: ./backend
+    container_name: dreadspire-backend
+    ports:
+      - "3001:3001"
+  frontend:
+    build: ./frontend
+    container_name: dreadspire-frontend
+    depends_on:
+      - backend
+    ports:
+      - "3000:80"

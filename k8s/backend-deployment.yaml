@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dreadspire-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dreadspire-backend
+  template:
+    metadata:
+      labels:
+        app: dreadspire-backend
+    spec:
+      containers:
+      - name: dreadspire-backend
+        image: your-registry/dreadspire-backend:latest
+        ports:
+        - containerPort: 3001

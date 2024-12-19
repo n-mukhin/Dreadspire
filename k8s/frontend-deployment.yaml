@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dreadspire-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dreadspire-frontend
+  template:
+    metadata:
+      labels:
+        app: dreadspire-frontend
+    spec:
+      containers:
+      - name: dreadspire-frontend
+        image: your-registry/dreadspire-frontend:latest
+        env:
+        - name: REACT_APP_BACKEND_URL
+          value: "http://dreadspire-backend:3001"
+        ports:
+        - containerPort: 80
