@@ -38,8 +38,8 @@ Dreadspire is a fully functional, production-ready web application that aggregat
 
 ### Clone the Repository
 ```bash
-git clone https://example.com/your-repo.git
-cd dreadspire
+git clone https://github.com/n-mukhin/Dreadspire.git
+cd Dreadspire
 ```
 
 ### Run with Docker Compose
